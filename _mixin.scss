@@ -1,0 +1,50 @@
+// ----------------------------------------
+// Layout
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin space($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin clearfix {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        overflow: hidden;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// ----------------------------------------
+// Appearance
+@mixin color($color, $bgColor) {
+    color: $color;
+    background-color: $bgColor;
+}
+
+// ----------------------------------------
+// Text Layout
+@mixin ovderflowWrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+// ----------------------------------------
+// Mouse Interaction
+@mixin mouseHover($opacity, $cursor) {
+    &:hover {
+        opacity: $opacity;
+        cursor: $cursor;
+    }
+}
